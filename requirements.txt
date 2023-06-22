@@ -1,0 +1,16 @@
+SoundFile
+librosa
+numpy
+scipy
+sklearn
+pytorch-lightning==1.7.4
+matplotlib
+seaborn
+hydra-core
+pyworld
+transformers
+pysptk
+nnmnkwii
+seaborn
+tensorboard
+fairseq

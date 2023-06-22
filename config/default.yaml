@@ -1,0 +1,12 @@
+defaults:
+  - preprocess: default
+  - dataset: default
+  - model: default
+  - train: default
+use_tb: true
+log_dir: pl_log
+debug: false
+hydra:
+  output_subdir: hydra
+  job:
+    chdir: True

@@ -1,3 +1,8 @@
+hifigan/g_16k_320hop
+data
+codes
+ckpt
+outputs
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,0 +1,32 @@
+path:
+  raw_path: ./data/LJS
+  processed_path: ./data/LJS
+view:
+  val: 128
+  test_speaker: 1
+  test_wav_per_speaker: 128
+  kmeans_filelist: ./filelists/ljs_kmeans.txt
+  train_filelist: ./filelists/ljs_train.txt
+  val_filelist: ./filelists/ljs_val.txt
+  test_filelist: ./filelists/ljs_test.txt
+audio:
+  sr: 16000
+  normalization: False
+  max_wav_value: 32768.0
+  top_db: 60
+stft:
+  n_fft: 1024
+  window_length: 1024
+  hop_length: 320
+mel:
+  n_mel: 80
+  fmin: 0
+  fmax: 8000
+pitch:
+  feature: "phoneme" # frame or phoneme
+  normalization: True
+  norm_method: "z_score"
+energy:
+  feature: "phoneme" # frame or phoneme
+  normalization: True
+  norm_method: "z_score"

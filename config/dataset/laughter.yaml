@@ -1,0 +1,18 @@
+dataset:
+  _target_: data_module.FSDataset
+
+train:
+  filelist: ./filelists/laughter_train.txt
+  batch_size: 32
+  shuffle: true
+
+val:
+  filelist: ./filelists/laughter_val.txt
+  batch_size: 32
+  shuffle: false
+test:
+  filelist: ./filelists/laughter_test.txt
+  batch_size: 1
+  shuffle: false
+padding_idx: 0
+max_sequence_length: 1000

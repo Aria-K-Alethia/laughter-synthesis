@@ -1,0 +1,13 @@
+trainer:
+  accelerator: 'gpu'
+  devices: 1
+  min_steps: 200000
+  max_steps: 900000
+  precision: 16
+  accumulate_grad_batches: 1
+  gradient_clip_val: 1.0
+
+audio_log_interval: 10
+lr: 1.0
+warmup_steps: 4000
+early_stop: true
