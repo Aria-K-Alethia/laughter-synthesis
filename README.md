@@ -30,13 +30,13 @@ If everything goes well, you should find the processed data under `data/laughter
 ```bash
 python3 train.py preprocess=laughter dataset=laughter
 ```
-This will train the TTS model with the default setting.
+This will train the proposed TTS model with the default setting.
 
 # Token language model
 ```bash
 bash ./scripts/tlm.sh
 ```
-This will train the token language model with the default setting.
+This will train the proposed token language model with the default setting.
 
 After training, you can sample new samples with `tlm/sample.sh` or evaluate the model with `tlm/eval.sh`.
 
