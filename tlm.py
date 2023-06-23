@@ -22,7 +22,7 @@ for k, filelist in name2list.items():
     print(f'{k}, {len(buf)} items')
     name2code[k] = buf
 print(f'Max sample length: {max_length}')
-outdir = f'ulm/data'
+outdir = f'tlm/data'
 os.makedirs(outdir, exist_ok=True)
 for name, code in name2code.items():
     outpath = join(outdir, name+'.txt')
