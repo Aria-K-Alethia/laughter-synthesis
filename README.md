@@ -41,7 +41,7 @@ This will train the proposed token language model with the default setting.
 After training, you can sample new samples with `tlm/sample.sh` or evaluate the model with `tlm/eval.sh`.
 
 # Citation
-Please kindly cite the following paper if you find the copurs, code, or paper is helpful for your work:
+Please kindly cite the following paper if you find the corpus, code, or paper is helpful for your work:
 ```
 @inproceedings{xin2023laughter
   title={Laughter Synthesis using Pseudo Phonetic Tokens with a Large-scale In-the-wild Laughter Corpus},
