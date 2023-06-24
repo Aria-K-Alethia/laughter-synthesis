@@ -16,7 +16,7 @@ Results of comprehensive subjective and objective evaluations demonstrate that t
 # Setup
 Please follow the steps below to prepare your environment and data:
 - clone this repo
-- `pip install requirements.txt`
+- `pip install -r requirements.txt`
 - download vocoder [here](https://drive.google.com/file/d/1vvmqo0Aq0TGmAwfHuBqNudhzYf1UUQwu/view?usp=sharing) and put it under `hifigan` dir.
 - download the proposed laughter corpus at [here](https://sites.google.com/site/shinnosuketakamichi/research-topics/laughter_corpus)
 
