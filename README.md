@@ -12,6 +12,7 @@ Results of comprehensive subjective and objective evaluations demonstrate that t
 
 [[paper]](https://arxiv.org/abs/2305.12442)
 [[demo]](https://aria-k-alethia.github.io/2023laughter-demo/)
+[[laughter corpus]](https://sites.google.com/site/shinnosuketakamichi/research-topics/laughter_corpus)
 
 # Setup
 Please follow the steps below to prepare your environment and data:
