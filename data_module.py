@@ -26,12 +26,6 @@ class DataModule(pl.LightningDataModule):
         batch_size = phase_cfg.batch_size
         #ds = hydra.utils.instantiate(self.cfg.dataset.dataset, phase, self.cfg)
         ds = FSDataset(phase, self.cfg)
-        '''
-        if phase == 'train':
-            sampler = CustomSampler(ds, True)
-        else:
-            sampler = None
-        '''
         sampler = None
         dl = DataLoader(ds, batch_size, phase_cfg.shuffle, num_workers=8, sampler=sampler, collate_fn=ds.collate_fn)
 
@@ -166,27 +160,3 @@ class FSDataset(Dataset):
             'mel_max_length': mel_max_length,
         }
         return out
-        
-class CustomSampler(Sampler):
-    def __init__(self, ds, shuffle):
-        self.ds = ds
-        self.shuffle = shuffle
-        self.verbal_indices = []
-        self.nv_indices = []
-        self.nv_spkrs = ['matsumoto', 'yamamoto', 'yokoda', 'nagashima']
-        self.n = 10
-        for i, (item, ) in enumerate(ds.filelist):
-            spkr = item.split('_')[0]
-            if spkr in self.nv_spkrs:
-                self.nv_indices.append(i)
-            else:
-                self.verbal_indices.append(i)
-
-    def __iter__(self):
-        indices = self.verbal_indices + self.nv_indices * self.n
-        if self.shuffle:
-            random.shuffle(indices)
-        return iter(indices)
-
-    def __len__(self):
-        return len(self.verbal_indices) + len(self.nv_indices) * self.n
